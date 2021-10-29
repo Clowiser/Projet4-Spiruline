@@ -3,24 +3,36 @@
     alt="Vue logo"
     src="./assets/spiruline.png"
   />
-  <HelloWorld msg="La Spiruline" />
+  <Home msg="La Spiruline" />
   <div> 
     <!-- BOUTONS -->
     <input type="button" v-on:click="onSuppliersListClick" value="Liste des fournisseurs"/>
     <input type="button" @click="onMapClick" value="Carte des fournisseurs"/>
   </div>
+  <!-- ROUTER -->
+  <div>
+    <router-link to='/suppliers'>SuppliersList</router-link>
+    <br>
+    <router-link to='/map'>SuppliersMap</router-link>
+    <!-- 4.3.2 - <router-link to="" ></router-link> permet de passer d'une page à l'autre. -->
+    <br>
+    <router-link to='/supplier'>Supplier</router-link>
+  </div>
+  <!-- 5.1.1 - Créez dans un premier temps une nouvelle route '/supplier' qui va représenter un nouveau composant à créer, Supplier.vue. -->
+  <router-view />
+  <!-- 4.3.1 - <router-view></router-view> affiche le contenu de la route correspondant au composant spécifié dans la déclaration. -->
 </template>
 
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Home from "./components/Home.vue";
 
 export default {
   components: {
-    HelloWorld,
+    Home,
   },
 
-   methods: { // on déclare nos méthodes dans un methods
+   methods: { // on déclare nos méthodes dans un methods (merci captain obvious!)
     onSuppliersListClick(){
       alert('Message sur la liste');
     },
@@ -30,6 +42,7 @@ export default {
     },
 }
 };
+// 2.1 - Ajoutez dans votre composant App deux méthodes : onSuppliersListClick et onMapClick qui devront faire des alertes pour marquer le fait qu'un utilisateur a cliqué dessus => on fait deux boutons ou on appelle les méthodes correspondantes lors d'un clic
 </script>
 
 
