@@ -2,14 +2,12 @@
     <div>
         <div v-if='loading'>Chargement des informations en cours, merci de patienter !</div>
 
-
         <div v-if="error">
         <p>Erreur - Veuillez réessayer ultérieurement.</p>
         <p>{{error}}</p>
         </div>
 
         <h1>Liste des fournisseurs</h1>
-        <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit." </p>
     </div>
     <Supplier v-for="supplier in suppliers" :key="supplier.id" :name="supplier.name" :status="supplier.status" :checked-at="supplier.checkedAt" class="cadre"/> 
     <!-- 5.2.1 - Dans un premier temps, appelez le composant Supplier dans le composant SuppliersList. Vous devriez donc avoir la même page aux urls /suppliers et /supplier -->
@@ -46,10 +44,7 @@ export default {
         .finally( () => {
             this.loading = false;
         })
-
     }
-
 }
-
 
 </script>

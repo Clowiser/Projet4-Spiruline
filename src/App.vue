@@ -1,22 +1,23 @@
 <template>
-  <img
+  <div class='logoTitre'>
+    <img
     alt="Vue logo"
     src="./assets/spiruline.png"
-  />
-  <Home msg="La Spiruline" />
-  <!-- <div>  -->
+    />
+    <Home class='texte' msg="La Spiruline" />
+  </div>
+  <div>
     <!-- BOUTONS -->
     <!-- <input type="button" v-on:click="onSuppliersListClick" value="Liste des fournisseurs"/>
-    <input type="button" @click="onMapClick" value="Carte des fournisseurs"/>
-  </div> -->
+    <input type="button" @click="onMapClick" value="Carte des fournisseurs"/> -->
+  </div>
   <!-- ROUTER -->
-  <div>
-    <router-link to='/suppliers'>SuppliersList</router-link>
-    <br>
-    <router-link to='/map'>SuppliersMap</router-link>
+  <div class='router'>
+    <router-link to='/suppliers'>Liste des Fournisseurs</router-link>
+    <router-link to='/map'>Carte des Fournisseurs</router-link>
     <!-- 4.3.2 - <router-link to="" ></router-link> permet de passer d'une page à l'autre. -->
-    <br>
-    <router-link to='/supplier'>Supplier</router-link>
+    <!-- <br>
+    <router-link to='/supplier'>Supplier</router-link> -->
   </div>
   <!-- 5.1.1 - Créez dans un premier temps une nouvelle route '/supplier' qui va représenter un nouveau composant à créer, Supplier.vue. -->
   <router-view />
@@ -49,11 +50,9 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 1%; 
+  text-align: center;
 }
 
 .cadre{
@@ -61,5 +60,21 @@ export default {
   margin: auto;
   width: 60%;;
   margin-top: 1%;
+}
+
+.logoTitre{
+   display: flex;
+   width: 80%;
+   margin: auto;
+}
+
+.texte{
+  margin-top: 10%;
+  color : #214f34
+}
+
+.router{
+  display: flex;
+  justify-content: space-around;
 }
 </style>

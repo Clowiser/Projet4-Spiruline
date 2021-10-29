@@ -1,12 +1,13 @@
 <template>
     <div >
-        <h1>Fournisseur: {{name}}</h1>
+        <h1>Fournisseur : {{name}}</h1>
         <div v-bind:class="{'red':!status, 'green':status}">
             <!-- quand !status = false grâce au ! et sans ! = true -->
+            <!-- TEST avec ternaire : opérateur conditionnel -->
             <h3>Stock ? {{status}}</h3>
         </div>
         <!-- <h5>Date de dernier relevé des stocks: {{checkedAt.toLocaleString()}}</h5>  -->
-        <h5>Date de dernier relevé des stocks: {{formatage}}</h5> 
+        <h5>Date du dernier relevé des stocks: {{formatage}}</h5> 
     </div>
 </template>
 
