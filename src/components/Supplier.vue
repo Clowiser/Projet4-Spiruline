@@ -3,9 +3,9 @@
         <h1>Fournisseurs: {{name}}</h1>
         <div v-bind:class="{'red':!status, 'green':status}">
             <!-- quand !status = false grâce au ! et sans ! = true -->
-            <h3>A du stock? {{status}}</h3>
+            <h3>Stock ? {{status}}</h3>
         </div>
-        <!-- <h5>Date de dernier relevé des stocks: {{checkedAt.toLocaleString()}}</h5> --> 
+        <!-- <h5>Date de dernier relevé des stocks: {{checkedAt.toLocaleString()}}</h5>  -->
     </div>
 </template>
 
