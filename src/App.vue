@@ -55,4 +55,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.cadre{
+  border: solid #214f34 1px;
+  margin: auto;
+  width: 60%;;
+  margin-top: 1%;
+}
 </style>
