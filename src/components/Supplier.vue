@@ -1,6 +1,6 @@
 <template>
     <div >
-        <h1>Fournisseurs: {{name}}</h1>
+        <h1>Fournisseur: {{name}}</h1>
         <div v-bind:class="{'red':!status, 'green':status}">
             <!-- quand !status = false grâce au ! et sans ! = true -->
             <h3>Stock ? {{status}}</h3>
@@ -26,7 +26,7 @@ export default {
     // }
     // 5.2.2 - Ajoutez le fait que le composant Supplier a trois props qui s'appellent name, status et checkedAt, supprimez les datas du composant Supplier, mais ajoutez les dans le composant SuppliersList.
 
-      computed: {
+      computed: { // date affiche 'Just now'
       formatage(){
         return format(this.date);
       }

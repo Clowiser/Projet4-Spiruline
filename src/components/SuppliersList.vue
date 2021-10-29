@@ -1,5 +1,13 @@
 <template>
     <div>
+        <div v-if='loading'>Chargement des informations en cours, merci de patienter !</div>
+
+
+        <div v-if="error">
+        <p>Erreur - Veuillez réessayer ultérieurement.</p>
+        <p>{{error}}</p>
+        </div>
+
         <h1>Liste des fournisseurs</h1>
         <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit." </p>
     </div>
@@ -10,7 +18,8 @@
 </template>
 
 <script>
-import Supplier from './Supplier.vue'
+import Supplier from './Supplier.vue';
+import axios from 'axios';
 
 export default {
   name: 'SuppliersList',
@@ -18,22 +27,28 @@ export default {
 
   data(){
         return {
-            suppliers: [
-                {
-                id: 1,
-                name: "Fournisseur 1",
-                status: true,
-                checkedAt: new Date()
-                },
-                {
-                id: 2,
-                name: "Fournisseur 2",
-                status: false,
-                checkedAt: new Date()
-                }
-            ]
+            suppliers: [],
+            loading: false,
+            error: null,
         }
+    },
+
+    mounted(){
+        this.loading = true,
+        axios.get('https://api-suppliers.herokuapp.com/api/suppliers')
+        .then(response => {
+            this.suppliers = response.data;
+        })
+        .catch(error => {
+            console.log(error);
+            this.error = error;
+        })
+        .finally( () => {
+            this.loading = false;
+        })
+
     }
+
 }
 
 
