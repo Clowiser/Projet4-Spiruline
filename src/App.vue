@@ -77,4 +77,15 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+
+.map{
+  border: #bae2ca solid 1px;
+  margin: auto;
+  width: 80%;
+  height: 400px
+}
+
+.titreSuppliers{
+   color : #214f34
+}
 </style>

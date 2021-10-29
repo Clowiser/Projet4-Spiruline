@@ -7,7 +7,7 @@
         <p>{{error}}</p>
         </div>
 
-        <h1>Liste des fournisseurs</h1>
+        <h1 class='titreSuppliers'>Liste des fournisseurs</h1>
     </div>
     <Supplier v-for="supplier in suppliers" :key="supplier.id" :name="supplier.name" :status="supplier.status" :checked-at="supplier.checkedAt" class="cadre"/> 
     <!-- 5.2.1 - Dans un premier temps, appelez le composant Supplier dans le composant SuppliersList. Vous devriez donc avoir la même page aux urls /suppliers et /supplier -->

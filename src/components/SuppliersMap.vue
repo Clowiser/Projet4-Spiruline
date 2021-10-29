@@ -1,7 +1,8 @@
 <template>
 <div>
-    <h1>Cartes des fournisseurs</h1>
-    <p>La carte des fournisseurs !</p>
+    <h1 class='titreSuppliers'>Cartes des fournisseurs</h1>
+</div>
+<div class='map'>
 </div>
 </template>
 
