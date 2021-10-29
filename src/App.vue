@@ -4,11 +4,11 @@
     src="./assets/spiruline.png"
   />
   <Home msg="La Spiruline" />
-  <div> 
+  <!-- <div>  -->
     <!-- BOUTONS -->
-    <input type="button" v-on:click="onSuppliersListClick" value="Liste des fournisseurs"/>
+    <!-- <input type="button" v-on:click="onSuppliersListClick" value="Liste des fournisseurs"/>
     <input type="button" @click="onMapClick" value="Carte des fournisseurs"/>
-  </div>
+  </div> -->
   <!-- ROUTER -->
   <div>
     <router-link to='/suppliers'>SuppliersList</router-link>
