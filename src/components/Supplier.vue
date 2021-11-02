@@ -4,7 +4,9 @@
         <div v-bind:class="{'red':!status, 'green':status}">
             <!-- quand !status = false grâce au ! et sans ! = true -->
             <!-- TEST avec ternaire : opérateur conditionnel -->
-            <h3>Stock ? {{status}}</h3>
+            <!-- <h3>Stock ? {{status}}</h3> -->
+            <p v-if='!status'>PAS DE STOCK</p>
+            <p v-else>STOCK OK</p>
         </div>
         <!-- <h5>Date de dernier relevé des stocks: {{checkedAt.toLocaleString()}}</h5>  -->
         <h5>Date du dernier relevé des stocks: {{formatage}}</h5> 

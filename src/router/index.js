@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SuppliersList from '../components/SuppliersList.vue';
 import SuppliersMap from '../components/SuppliersMap.vue';
+// import SuppliersMap from '../components/Home.vue';
 // import Supplier from '../components/Supplier.vue';
 
 const router = createRouter({
@@ -15,8 +16,8 @@ const router = createRouter({
         component: SuppliersMap
         },
         // {
-        // path: '/supplier',
-        // component: Supplier
+        // path: '/',
+        // component: Home
         // }
     ]
 })

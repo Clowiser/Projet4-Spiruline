@@ -1,7 +1,7 @@
 <template>
   <div class='logoTitre'>
     <img
-    alt="Vue logo"
+    alt="spiruline logo"
     src="./assets/spiruline.png"
     />
     <Home class='texte' msg="La Spiruline" />
@@ -70,19 +70,12 @@ export default {
 
 .texte{
   margin-top: 10%;
-  color : #214f34
+  color: #214f34
 }
 
 .router{
   display: flex;
   justify-content: space-around;
-}
-
-.map{
-  border: #bae2ca solid 1px;
-  margin: auto;
-  width: 80%;
-  height: 400px
 }
 
 .titreSuppliers{
