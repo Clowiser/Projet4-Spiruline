@@ -8,6 +8,7 @@
         </div>
         <!-- <h5>Date de dernier relevé des stocks: {{checkedAt.toLocaleString()}}</h5>  -->
         <h5>Date du dernier relevé des stocks: {{formatage}}</h5> 
+        <p>Latitude: {{latitude}}</p>
     </div>
 </template>
 
@@ -17,7 +18,7 @@ import { format } from 'timeago.js';
 // 5.1.2 - Ce composant aura comme data l'objet javascript suivant :
 export default {
     name: 'Supplier',
-    props: ['name', 'status', 'checkedAt'],
+    props: ['name', 'status', 'checkedAt', 'latitude'],
     //   data(){
     //     return {
     //         name: 'Mon fournisseur',
