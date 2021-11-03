@@ -12,6 +12,10 @@ const router = createRouter({
         component: SuppliersList
         },
         {
+        path: '/',
+        redirect: '/suppliers'
+        },
+        {
         path: '/map',
         component: SuppliersMap
         },
